@@ -1,2 +1,4 @@
-package com.unidev.web;public class CustomerRestController {
+package com.unidev.web;
+
+public class CustomerRestController {
 }

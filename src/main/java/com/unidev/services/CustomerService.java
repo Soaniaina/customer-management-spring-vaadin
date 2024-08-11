@@ -1,2 +1,4 @@
-package com.unidev.services;public class CustomerService {
+package com.unidev.services;
+
+public class CustomerService {
 }
