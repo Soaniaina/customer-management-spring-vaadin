@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: customer_management
+    build: .
+    ports:
+      - "8009:8009"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
