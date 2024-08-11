@@ -12,24 +12,20 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
 import org.springframework.util.StringUtils;
 
+@Route
 public class MainView extends VerticalLayout {
 
     private final CustomerRepository repo;
-
-    private final CustomerEditor editor;
 
     final Grid<Customer> grid;
 
     final TextField filter;
 
-    private final Button addNewBtn;
-
     public MainView(CustomerRepository repo, CustomerEditor editor) {
         this.repo = repo;
-        this.editor = editor;
         this.grid = new Grid<>(Customer.class);
         this.filter = new TextField();
-        this.addNewBtn = new Button("New customer", VaadinIcon.PLUS.create());
+        Button addNewBtn = new Button("New customer", VaadinIcon.PLUS.create());
 
         // build layout
         HorizontalLayout actions = new HorizontalLayout(filter, addNewBtn);
@@ -74,5 +70,4 @@ public class MainView extends VerticalLayout {
         }
     }
     // end::listCustomers[]
-
 }
